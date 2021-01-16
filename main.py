@@ -14,11 +14,10 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    print(message.author.id)
-    if message.author.id == os.getenv('USERID'):
-        await discord.Message.delete(message)
+#     if message.author.id == os.getenv('USERID'):
+#         await discord.Message.delete(message)
+#         await message.channel.send("I'm Frendy's mortal enemy!")
+    if message.content.startswith('$hello'):
         await message.channel.send("I'm Frendy's mortal enemy!")
-    # if message.content.startswith('$hello'):
-    #     await message.channel.send(message.author)
 
 client.run(os.getenv('TOKEN'))
