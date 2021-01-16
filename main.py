@@ -14,7 +14,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.author.id == os.getenv('USERID_BAN')
+    if message.author.id == os.getenv('USERID_BAN'):
         await discord.Message.delete(message)
         await message.channel.send("I'm Frendy's mortal enemy!")
     # if message.content.startswith('$hello'):
