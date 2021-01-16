@@ -14,7 +14,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    print(os.getenv('USERID'))
+    print(message.author.id)
     if message.author.id == os.getenv('USERID'):
         await discord.Message.delete(message)
         await message.channel.send("I'm Frendy's mortal enemy!")
