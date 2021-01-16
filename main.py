@@ -13,7 +13,9 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-
+    
+    print(message.author.id)
+    print(os.getenv('USERID'))
     if message.author.id == os.getenv('USERID'):
         print("Deleting message...")
         await discord.Message.delete(message)
